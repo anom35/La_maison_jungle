@@ -1,11 +1,13 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+// ajouter /client pour la 1.18
+import ReactDOM from 'react-dom/client'
 import './styles/index.css'
 import App from './components/App'
 
-ReactDOM.render(
+// utiliser cette méthode pour la compatibilité 1.18 react
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
 	<React.StrictMode>
 		<App />
-	</React.StrictMode>,
-	document.getElementById('root')
+	</React.StrictMode>
 )
